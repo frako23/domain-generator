@@ -12,12 +12,15 @@ window.onload = function() {
   let noun = ["susto", "secreto", "mentira", "pelon", "metidadepata"];
   let extensiones = [".com", ".net", ".us", ".io", ".dev"];
 
-  let excuseP = document.querySelector("#excuse");
-  excuseP.textContent =
-    pronoun[Math.floor(Math.random() * 5)] +
-    adj[Math.floor(Math.random() * 5)] +
-    noun[Math.floor(Math.random() * 5)] +
-    extensiones[Math.floor(Math.random() * 5)];
+  for (let a of pronoun) {
+    for (let b of adj) {
+      for (let c of noun) {
+        for (let d of extensiones) {
+          console.log(`${a}${b}${c}${d}`);
+        }
+      }
+    }
+  }
 
-  console.log(excuseP);
+  console.log("Hello Rigo from the console!");
 };
